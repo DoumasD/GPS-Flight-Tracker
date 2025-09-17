@@ -1,0 +1,48 @@
+ <mat-sidenav-container class="example-container">
+      
+        <!-- Your main application content goes here -->
+        <h1 color="yellow">GPS Drone Flight Tracker</h1>
+
+        <div class="texts">Add GPS Coordinates to zoom into an area:</div>
+        <form class="forms"  name="zoomForm" margin-bottom=20px; (ngSubmit)="flytoArea()">
+              <div>
+              <label for="1">Longitude:</label>
+              <input type="number" id="1" class="right-aligned-input" step="0.000001" name="Longitude" [(ngModel)]="Longitude">
+              </div>
+              <div>
+              <label for="2">Latitude:</label>
+              <input type="number" id="2" class="right-aligned-input" step="0.000001"  name="Latitude" [(ngModel)]="Latitude">
+              </div>
+              <div>
+              <label for="3">Height:</label>
+              <input type="number" id="3"  class="right-aligned-input"step="0.000001" name="Height" [(ngModel)]="Height">
+              </div>
+              <div>
+              <button id="4">zoom</button>
+              </div>
+        </form>
+      
+        <div class="texts">Open Serial Communication:</div>
+        <form class="forms"  name="serialcomForm" margin-top=20px;   (ngSubmit)="openCloseSerialConnection()">
+                <div>
+              <label for="5">Enter port:</label>
+              <select id="5" [(ngModel)]="selectedPort" name="selectedPort"> 
+                  <option *ngFor="let option of serialPorts" [value]="option">{{ option }}</option>
+              </select>
+              </div>
+              <div>
+              <label for="6">Enter baudrate:</label>
+               <select id="6" [(ngModel)]="selectedBaudrate" name="selectedBaudrate">
+                  <option *ngFor="let option of baudrates" [value]="option">{{ option }}</option>
+              </select>
+             </div>
+             <div>
+              <button class="buttons">{{buttonText}}</button>
+              </div>
+        </form> 
+
+
+        <div class="forms" class="texts">Clear Globe:
+        <button  (click)="clear()" >Clear</button>
+        </div>
+</mat-sidenav-container>
