@@ -20,7 +20,7 @@ The arguments after the name of the python script are the following: long1, lat1
 The GPS data should be generated, sent through  the tunnel to the back-end of the app, and shown on the globe.
 
 # Usage
-You can zoom into an area of interest on the globe, where serial data will start plotting on the globe. The mouse wheel is used to zoom in and out of the globe. Dragging the globe rotates the globe. Pressing Ctrl and dragging the mouse changes the camera angle. Pressing the clear button will clear the globe allowing to rest the globe from the beginning.
+You can zoom into an area of interest on the globe, where serial data will start plotting on the globe. The mouse wheel is used to zoom in and out of the globe. Dragging the globe rotates the globe. Pressing Ctrl and dragging the mouse changes the camera angle. Pressing the clear button will clear the globe allowing to reset the globe from the beginning.
 
 # Credit
 
